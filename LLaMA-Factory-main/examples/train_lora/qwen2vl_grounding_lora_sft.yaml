@@ -1,0 +1,58 @@
+### model
+model_name_or_path: /data0/zhuoxu/yihong/code/LLaMA-Factory-main/saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2  # 你的二阶段训练好的模型路径
+image_max_pixels: 1048576  # 增大图像分辨率以获得更好的定位精度
+video_max_pixels: 16384
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_rank: 16  # 增大rank以获得更好的grounding能力
+lora_alpha: 32
+lora_target: all
+lora_dropout: 0.05
+
+### dataset
+dataset: train_grounding_wo_think_aug  # 改为已注册的数据集名称
+template: qwen2_vl
+cutoff_len: 4096  # 增大长度以容纳坐标信息
+max_samples: 50000  # 根据你的数据量调整
+overwrite_cache: true
+preprocessing_num_workers: 16
+dataloader_num_workers: 4
+
+### output
+output_dir: saves/qwen2_vl-7b-stage2/lora/grounding_wo_think_new
+logging_steps: 10
+save_steps: 500
+plot_loss: true
+overwrite_output_dir: true
+save_only_model: false
+
+### train
+per_device_train_batch_size: 2  # 根据显存调整
+gradient_accumulation_steps: 4
+learning_rate: 2.0e-6  # 稍微降低学习率，因为是在已训练模型基础上微调
+num_train_epochs: 3.0  # 增加训练轮数
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+# resume_from_checkpoint: null  # 注释掉这一行以避免错误
+
+### eval
+# val_size: 0.1
+# per_device_eval_batch_size: 1
+# eval_strategy: steps
+# eval_steps: 1000
+# metric_for_best_model: eval_loss
+# greater_is_better: false
+# load_best_model_at_end: true
+
+### special settings for grounding
+# 这些设置有助于grounding任务的训练
+dataloader_pin_memory: false
+remove_unused_columns: false
+# report_to: swanlab  # swanlab不被支持，注释掉
+report_to: tensorboard  # 使用tensorboard替代 

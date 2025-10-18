@@ -1,0 +1,979 @@
+[INFO|2025-06-05 16:15:25] tokenization_utils_base.py:2048 >> loading file special_tokens_map.json
+
+[INFO|2025-06-05 16:15:25] tokenization_utils_base.py:2048 >> loading file tokenizer_config.json
+
+[INFO|2025-06-05 16:15:25] tokenization_utils_base.py:2048 >> loading file chat_template.jinja
+
+[INFO|2025-06-05 16:15:25] tokenization_utils_base.py:2313 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+
+[INFO|2025-06-05 16:15:25] image_processing_base.py:379 >> loading configuration file /data0/zhuoxu/yihong/code/LLaMA-Factory-main/saves/Qwen2-VL-7B-Instruct/full/train_Med_Qwen_2_VL_7B_Proj_stage1_warmup_only_F-I/preprocessor_config.json
+
+[INFO|2025-06-05 16:15:25] image_processing_base.py:379 >> loading configuration file /data0/zhuoxu/yihong/code/LLaMA-Factory-main/saves/Qwen2-VL-7B-Instruct/full/train_Med_Qwen_2_VL_7B_Proj_stage1_warmup_only_F-I/preprocessor_config.json
+
+[WARNING|2025-06-05 16:15:25] logging.py:329 >> Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.48, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+
+[WARNING|2025-06-05 16:15:25] logging.py:329 >> Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.48, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+
+[INFO|2025-06-05 16:15:25] image_processing_base.py:434 >> Image processor Qwen2VLImageProcessor {
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessor",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+
+[INFO|2025-06-05 16:15:25] tokenization_utils_base.py:2048 >> loading file vocab.json
+
+[INFO|2025-06-05 16:15:25] tokenization_utils_base.py:2048 >> loading file merges.txt
+
+[INFO|2025-06-05 16:15:25] tokenization_utils_base.py:2048 >> loading file tokenizer.json
+
+[INFO|2025-06-05 16:15:25] tokenization_utils_base.py:2048 >> loading file added_tokens.json
+
+[INFO|2025-06-05 16:15:25] tokenization_utils_base.py:2048 >> loading file special_tokens_map.json
+
+[INFO|2025-06-05 16:15:25] tokenization_utils_base.py:2048 >> loading file tokenizer_config.json
+
+[INFO|2025-06-05 16:15:25] tokenization_utils_base.py:2048 >> loading file chat_template.jinja
+
+[INFO|2025-06-05 16:15:25] tokenization_utils_base.py:2313 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+
+[INFO|2025-06-05 16:15:26] processing_utils.py:876 >> Processor Qwen2VLProcessor:
+- image_processor: Qwen2VLImageProcessor {
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessor",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+- tokenizer: Qwen2TokenizerFast(name_or_path='/data0/zhuoxu/yihong/code/LLaMA-Factory-main/saves/Qwen2-VL-7B-Instruct/full/train_Med_Qwen_2_VL_7B_Proj_stage1_warmup_only_F-I', vocab_size=151643, model_max_length=4096, is_fast=True, padding_side='right', truncation_side='right', special_tokens={'eos_token': '<|im_end|>', 'pad_token': '<|endoftext|>', 'additional_special_tokens': ['<|im_start|>', '<|im_end|>', '<|object_ref_start|>', '<|object_ref_end|>', '<|box_start|>', '<|box_end|>', '<|quad_start|>', '<|quad_end|>', '<|vision_start|>', '<|vision_end|>', '<|vision_pad|>', '<|image_pad|>', '<|video_pad|>']}, clean_up_tokenization_spaces=False, added_tokens_decoder={
+	151643: AddedToken("<|endoftext|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151644: AddedToken("<|im_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151645: AddedToken("<|im_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151646: AddedToken("<|object_ref_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151647: AddedToken("<|object_ref_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151648: AddedToken("<|box_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151649: AddedToken("<|box_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151650: AddedToken("<|quad_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151651: AddedToken("<|quad_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151652: AddedToken("<|vision_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151653: AddedToken("<|vision_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151654: AddedToken("<|vision_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151655: AddedToken("<|image_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151656: AddedToken("<|video_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+}
+)
+
+{
+  "processor_class": "Qwen2VLProcessor"
+}
+
+
+[INFO|2025-06-05 16:15:26] logging.py:157 >> Add <|im_end|> to stop words.
+
+[INFO|2025-06-05 16:15:26] logging.py:157 >> Loading dataset /data0/zhuoxu/yihong/code/LLaMA-Factory-main/data/Med_MIMIC-CXR-10000-cot_w_label_train.json...
+
+[INFO|2025-06-05 16:15:28] configuration_utils.py:697 >> loading configuration file /data0/zhuoxu/yihong/code/LLaMA-Factory-main/saves/Qwen2-VL-7B-Instruct/full/train_Med_Qwen_2_VL_7B_Proj_stage1_warmup_only_F-I/config.json
+
+[INFO|2025-06-05 16:15:28] configuration_utils.py:771 >> Model config Qwen2VLConfig {
+  "_name_or_path": "/data0/zhuoxu/yihong/code/LLaMA-Factory-main/saves/Qwen2-VL-7B-Instruct/full/train_Med_Qwen_2_VL_7B_Proj_stage1_warmup_only_F-I",
+  "architectures": [
+    "Qwen2VLForConditionalGeneration"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151645,
+  "hidden_act": "silu",
+  "hidden_size": 3584,
+  "image_token_id": 151655,
+  "initializer_range": 0.02,
+  "intermediate_size": 18944,
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen2_vl",
+  "num_attention_heads": 28,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 4,
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": {
+    "mrope_section": [
+      16,
+      24,
+      24
+    ],
+    "rope_type": "default",
+    "type": "default"
+  },
+  "rope_theta": 1000000.0,
+  "sliding_window": 32768,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.49.0",
+  "use_cache": false,
+  "use_sliding_window": false,
+  "video_token_id": 151656,
+  "vision_config": {
+    "in_chans": 3,
+    "model_type": "qwen2_vl",
+    "spatial_patch_size": 14,
+    "torch_dtype": "float32"
+  },
+  "vision_end_token_id": 151653,
+  "vision_start_token_id": 151652,
+  "vision_token_id": 151654,
+  "vocab_size": 152064
+}
+
+
+[INFO|2025-06-05 16:15:28] modeling_utils.py:3979 >> loading weights file /data0/zhuoxu/yihong/code/LLaMA-Factory-main/saves/Qwen2-VL-7B-Instruct/full/train_Med_Qwen_2_VL_7B_Proj_stage1_warmup_only_F-I/model.safetensors.index.json
+
+[INFO|2025-06-05 16:15:28] modeling_utils.py:4162 >> Detected DeepSpeed ZeRO-3: activating zero.init() for this model
+
+[WARNING|2025-06-05 16:15:28] logging.py:329 >> You are attempting to use Flash Attention 2.0 without specifying a torch dtype. This might lead to unexpected behaviour
+
+[WARNING|2025-06-05 16:15:28] logging.py:329 >> You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+
+[INFO|2025-06-05 16:15:28] configuration_utils.py:1140 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "eos_token_id": 151645,
+  "use_cache": false
+}
+
+
+[INFO|2025-06-05 16:15:28] modeling_utils.py:1633 >> Instantiating Qwen2VisionTransformerPretrainedModel model under default dtype torch.float32.
+
+[WARNING|2025-06-05 16:15:28] logging.py:329 >> Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2VisionTransformerPretrainedModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+
+[WARNING|2025-06-05 16:15:29] logging.py:329 >> You are attempting to use Flash Attention 2.0 without specifying a torch dtype. This might lead to unexpected behaviour
+
+[WARNING|2025-06-05 16:15:29] logging.py:329 >> You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+
+[WARNING|2025-06-05 16:15:29] logging.py:329 >> Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2VisionTransformerPretrainedModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+
+[INFO|2025-06-05 16:15:42] modeling_utils.py:4970 >> All model checkpoint weights were used when initializing Qwen2VLForConditionalGeneration.
+
+
+[INFO|2025-06-05 16:15:42] modeling_utils.py:4978 >> All the weights of Qwen2VLForConditionalGeneration were initialized from the model checkpoint at /data0/zhuoxu/yihong/code/LLaMA-Factory-main/saves/Qwen2-VL-7B-Instruct/full/train_Med_Qwen_2_VL_7B_Proj_stage1_warmup_only_F-I.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use Qwen2VLForConditionalGeneration for predictions without further training.
+
+[INFO|2025-06-05 16:15:42] configuration_utils.py:1093 >> loading configuration file /data0/zhuoxu/yihong/code/LLaMA-Factory-main/saves/Qwen2-VL-7B-Instruct/full/train_Med_Qwen_2_VL_7B_Proj_stage1_warmup_only_F-I/generation_config.json
+
+[INFO|2025-06-05 16:15:42] configuration_utils.py:1140 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "do_sample": true,
+  "eos_token_id": [
+    151645,
+    151643
+  ],
+  "pad_token_id": 151643,
+  "temperature": 0.01,
+  "top_k": 1,
+  "top_p": 0.001
+}
+
+
+[INFO|2025-06-05 16:15:42] logging.py:157 >> Gradient checkpointing enabled.
+
+[INFO|2025-06-05 16:15:42] logging.py:157 >> Using FlashAttention-2 for faster training and inference.
+
+[INFO|2025-06-05 16:15:42] logging.py:157 >> ZeRO3 / FSDP detected, remaining trainable params in float32.
+
+[INFO|2025-06-05 16:15:42] logging.py:157 >> Fine-tuning method: Full
+
+[INFO|2025-06-05 16:15:42] logging.py:157 >> Set vision model not trainable: ['visual.patch_embed', 'visual.blocks'].
+
+[INFO|2025-06-05 16:15:42] logging.py:157 >> Set multi model projector not trainable: visual.merger.
+
+[INFO|2025-06-05 16:15:42] logging.py:157 >> trainable params: 7,115,194,880 || all params: 8,291,375,616 || trainable%: 85.8144
+
+[INFO|2025-06-05 16:15:42] trainer.py:746 >> Using auto half precision backend
+
+[INFO|2025-06-05 16:15:52] trainer.py:2405 >> ***** Running training *****
+
+[INFO|2025-06-05 16:15:52] trainer.py:2406 >>   Num examples = 9,095
+
+[INFO|2025-06-05 16:15:52] trainer.py:2407 >>   Num Epochs = 2
+
+[INFO|2025-06-05 16:15:52] trainer.py:2408 >>   Instantaneous batch size per device = 2
+
+[INFO|2025-06-05 16:15:52] trainer.py:2411 >>   Total train batch size (w. parallel, distributed & accumulation) = 16
+
+[INFO|2025-06-05 16:15:52] trainer.py:2412 >>   Gradient Accumulation steps = 4
+
+[INFO|2025-06-05 16:15:52] trainer.py:2413 >>   Total optimization steps = 1,136
+
+[INFO|2025-06-05 16:15:52] trainer.py:2414 >>   Number of trainable parameters = 7,115,194,880
+
+[INFO|2025-06-05 16:18:30] logging.py:157 >> {'loss': 1.5918, 'learning_rate': 9.9995e-06, 'epoch': 0.01, 'throughput': 763.45}
+
+[INFO|2025-06-05 16:21:00] logging.py:157 >> {'loss': 1.3355, 'learning_rate': 9.9981e-06, 'epoch': 0.02, 'throughput': 783.89}
+
+[INFO|2025-06-05 16:23:30] logging.py:157 >> {'loss': 1.3545, 'learning_rate': 9.9957e-06, 'epoch': 0.03, 'throughput': 800.99}
+
+[INFO|2025-06-05 16:26:00] logging.py:157 >> {'loss': 1.2788, 'learning_rate': 9.9924e-06, 'epoch': 0.04, 'throughput': 801.93}
+
+[INFO|2025-06-05 16:28:31] logging.py:157 >> {'loss': 1.2704, 'learning_rate': 9.9881e-06, 'epoch': 0.04, 'throughput': 807.78}
+
+[INFO|2025-06-05 16:31:01] logging.py:157 >> {'loss': 1.2625, 'learning_rate': 9.9828e-06, 'epoch': 0.05, 'throughput': 808.60}
+
+[INFO|2025-06-05 16:33:30] logging.py:157 >> {'loss': 1.2230, 'learning_rate': 9.9766e-06, 'epoch': 0.06, 'throughput': 809.86}
+
+[INFO|2025-06-05 16:36:01] logging.py:157 >> {'loss': 1.2130, 'learning_rate': 9.9694e-06, 'epoch': 0.07, 'throughput': 809.44}
+
+[INFO|2025-06-05 16:38:31] logging.py:157 >> {'loss': 1.2337, 'learning_rate': 9.9613e-06, 'epoch': 0.08, 'throughput': 812.30}
+
+[INFO|2025-06-05 16:41:02] logging.py:157 >> {'loss': 1.2260, 'learning_rate': 9.9523e-06, 'epoch': 0.09, 'throughput': 811.61}
+
+[INFO|2025-06-05 16:43:33] logging.py:157 >> {'loss': 1.2067, 'learning_rate': 9.9423e-06, 'epoch': 0.10, 'throughput': 809.17}
+
+[INFO|2025-06-05 16:46:03] logging.py:157 >> {'loss': 1.2179, 'learning_rate': 9.9313e-06, 'epoch': 0.11, 'throughput': 808.74}
+
+[INFO|2025-06-05 16:48:34] logging.py:157 >> {'loss': 1.1897, 'learning_rate': 9.9194e-06, 'epoch': 0.11, 'throughput': 808.41}
+
+[INFO|2025-06-05 16:51:05] logging.py:157 >> {'loss': 1.1827, 'learning_rate': 9.9066e-06, 'epoch': 0.12, 'throughput': 808.92}
+
+[INFO|2025-06-05 16:53:35] logging.py:157 >> {'loss': 1.1945, 'learning_rate': 9.8928e-06, 'epoch': 0.13, 'throughput': 808.17}
+
+[INFO|2025-06-05 16:56:06] logging.py:157 >> {'loss': 1.1829, 'learning_rate': 9.8781e-06, 'epoch': 0.14, 'throughput': 807.82}
+
+[INFO|2025-06-05 16:58:37] logging.py:157 >> {'loss': 1.2075, 'learning_rate': 9.8625e-06, 'epoch': 0.15, 'throughput': 808.57}
+
+[INFO|2025-06-05 17:01:11] logging.py:157 >> {'loss': 1.1787, 'learning_rate': 9.8459e-06, 'epoch': 0.16, 'throughput': 807.02}
+
+[INFO|2025-06-05 17:03:41] logging.py:157 >> {'loss': 1.1877, 'learning_rate': 9.8284e-06, 'epoch': 0.17, 'throughput': 806.97}
+
+[INFO|2025-06-05 17:06:13] logging.py:157 >> {'loss': 1.2134, 'learning_rate': 9.8100e-06, 'epoch': 0.18, 'throughput': 807.80}
+
+[INFO|2025-06-05 17:06:28] trainer.py:3942 >> Saving model checkpoint to saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-100
+
+[INFO|2025-06-05 17:06:28] configuration_utils.py:423 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-100/config.json
+
+[INFO|2025-06-05 17:06:28] configuration_utils.py:909 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-100/generation_config.json
+
+[INFO|2025-06-05 17:06:50] modeling_utils.py:3048 >> The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 4 checkpoint shards. You can find where each parameters has been saved in the index located at saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-100/model.safetensors.index.json.
+
+[INFO|2025-06-05 17:06:50] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-100/tokenizer_config.json
+
+[INFO|2025-06-05 17:06:50] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-100/special_tokens_map.json
+
+[INFO|2025-06-05 17:07:58] image_processing_base.py:261 >> Image processor saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-100/preprocessor_config.json
+
+[INFO|2025-06-05 17:07:58] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-100/tokenizer_config.json
+
+[INFO|2025-06-05 17:07:58] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-100/special_tokens_map.json
+
+[INFO|2025-06-05 17:07:59] processing_utils.py:638 >> chat template saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-100/chat_template.json
+
+[INFO|2025-06-05 17:10:55] logging.py:157 >> {'loss': 1.1340, 'learning_rate': 9.7907e-06, 'epoch': 0.18, 'throughput': 775.41}
+
+[INFO|2025-06-05 17:13:26] logging.py:157 >> {'loss': 1.1410, 'learning_rate': 9.7704e-06, 'epoch': 0.19, 'throughput': 777.21}
+
+[INFO|2025-06-05 17:15:56] logging.py:157 >> {'loss': 1.1848, 'learning_rate': 9.7493e-06, 'epoch': 0.20, 'throughput': 777.99}
+
+[INFO|2025-06-05 17:18:26] logging.py:157 >> {'loss': 1.1653, 'learning_rate': 9.7272e-06, 'epoch': 0.21, 'throughput': 779.35}
+
+[INFO|2025-06-05 17:20:56] logging.py:157 >> {'loss': 1.1731, 'learning_rate': 9.7042e-06, 'epoch': 0.22, 'throughput': 780.54}
+
+[INFO|2025-06-05 17:23:28] logging.py:157 >> {'loss': 1.1867, 'learning_rate': 9.6803e-06, 'epoch': 0.23, 'throughput': 781.85}
+
+[INFO|2025-06-05 17:25:58] logging.py:157 >> {'loss': 1.1727, 'learning_rate': 9.6556e-06, 'epoch': 0.24, 'throughput': 782.31}
+
+[INFO|2025-06-05 17:28:28] logging.py:157 >> {'loss': 1.1536, 'learning_rate': 9.6299e-06, 'epoch': 0.25, 'throughput': 783.50}
+
+[INFO|2025-06-05 17:30:58] logging.py:157 >> {'loss': 1.1358, 'learning_rate': 9.6034e-06, 'epoch': 0.26, 'throughput': 784.00}
+
+[INFO|2025-06-05 17:33:28] logging.py:157 >> {'loss': 1.1431, 'learning_rate': 9.5759e-06, 'epoch': 0.26, 'throughput': 784.73}
+
+[INFO|2025-06-05 17:36:00] logging.py:157 >> {'loss': 1.1618, 'learning_rate': 9.5476e-06, 'epoch': 0.27, 'throughput': 785.73}
+
+[INFO|2025-06-05 17:38:31] logging.py:157 >> {'loss': 1.1277, 'learning_rate': 9.5185e-06, 'epoch': 0.28, 'throughput': 786.43}
+
+[INFO|2025-06-05 17:41:02] logging.py:157 >> {'loss': 1.1787, 'learning_rate': 9.4884e-06, 'epoch': 0.29, 'throughput': 787.38}
+
+[INFO|2025-06-05 17:43:33] logging.py:157 >> {'loss': 1.1557, 'learning_rate': 9.4575e-06, 'epoch': 0.30, 'throughput': 787.86}
+
+[INFO|2025-06-05 17:46:04] logging.py:157 >> {'loss': 1.1546, 'learning_rate': 9.4258e-06, 'epoch': 0.31, 'throughput': 788.31}
+
+[INFO|2025-06-05 17:48:34] logging.py:157 >> {'loss': 1.2011, 'learning_rate': 9.3932e-06, 'epoch': 0.32, 'throughput': 789.13}
+
+[INFO|2025-06-05 17:51:04] logging.py:157 >> {'loss': 1.1190, 'learning_rate': 9.3598e-06, 'epoch': 0.33, 'throughput': 789.30}
+
+[INFO|2025-06-05 17:53:34] logging.py:157 >> {'loss': 1.1695, 'learning_rate': 9.3255e-06, 'epoch': 0.33, 'throughput': 789.79}
+
+[INFO|2025-06-05 17:56:04] logging.py:157 >> {'loss': 1.1173, 'learning_rate': 9.2904e-06, 'epoch': 0.34, 'throughput': 789.98}
+
+[INFO|2025-06-05 17:58:35] logging.py:157 >> {'loss': 1.1166, 'learning_rate': 9.2545e-06, 'epoch': 0.35, 'throughput': 790.44}
+
+[INFO|2025-06-05 17:58:50] trainer.py:3942 >> Saving model checkpoint to saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-200
+
+[INFO|2025-06-05 17:58:50] configuration_utils.py:423 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-200/config.json
+
+[INFO|2025-06-05 17:58:50] configuration_utils.py:909 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-200/generation_config.json
+
+[INFO|2025-06-05 17:59:09] modeling_utils.py:3048 >> The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 4 checkpoint shards. You can find where each parameters has been saved in the index located at saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-200/model.safetensors.index.json.
+
+[INFO|2025-06-05 17:59:09] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-200/tokenizer_config.json
+
+[INFO|2025-06-05 17:59:09] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-200/special_tokens_map.json
+
+[INFO|2025-06-05 18:00:19] image_processing_base.py:261 >> Image processor saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-200/preprocessor_config.json
+
+[INFO|2025-06-05 18:00:19] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-200/tokenizer_config.json
+
+[INFO|2025-06-05 18:00:19] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-200/special_tokens_map.json
+
+[INFO|2025-06-05 18:00:19] processing_utils.py:638 >> chat template saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-200/chat_template.json
+
+[INFO|2025-06-05 18:04:08] logging.py:157 >> {'loss': 1.1508, 'learning_rate': 9.2178e-06, 'epoch': 0.36, 'throughput': 768.54}
+
+[INFO|2025-06-05 18:06:39] logging.py:157 >> {'loss': 1.1423, 'learning_rate': 9.1803e-06, 'epoch': 0.37, 'throughput': 769.44}
+
+[INFO|2025-06-05 18:09:10] logging.py:157 >> {'loss': 1.1273, 'learning_rate': 9.1419e-06, 'epoch': 0.38, 'throughput': 770.35}
+
+[INFO|2025-06-05 18:11:42] logging.py:157 >> {'loss': 1.1339, 'learning_rate': 9.1028e-06, 'epoch': 0.39, 'throughput': 770.90}
+
+[INFO|2025-06-05 18:14:13] logging.py:157 >> {'loss': 1.1589, 'learning_rate': 9.0629e-06, 'epoch': 0.40, 'throughput': 771.41}
+
+[INFO|2025-06-05 18:16:51] logging.py:157 >> {'loss': 1.1206, 'learning_rate': 9.0222e-06, 'epoch': 0.40, 'throughput': 771.22}
+
+[INFO|2025-06-05 18:19:29] logging.py:157 >> {'loss': 1.1354, 'learning_rate': 8.9808e-06, 'epoch': 0.41, 'throughput': 771.24}
+
+[INFO|2025-06-05 18:22:11] logging.py:157 >> {'loss': 1.1624, 'learning_rate': 8.9385e-06, 'epoch': 0.42, 'throughput': 771.04}
+
+[INFO|2025-06-05 18:24:49] logging.py:157 >> {'loss': 1.1376, 'learning_rate': 8.8956e-06, 'epoch': 0.43, 'throughput': 771.06}
+
+[INFO|2025-06-05 18:27:25] logging.py:157 >> {'loss': 1.1821, 'learning_rate': 8.8519e-06, 'epoch': 0.44, 'throughput': 771.50}
+
+[INFO|2025-06-05 18:30:07] logging.py:157 >> {'loss': 1.1315, 'learning_rate': 8.8074e-06, 'epoch': 0.45, 'throughput': 770.82}
+
+[INFO|2025-06-05 18:32:44] logging.py:157 >> {'loss': 1.1239, 'learning_rate': 8.7622e-06, 'epoch': 0.46, 'throughput': 770.56}
+
+[INFO|2025-06-05 18:35:14] logging.py:157 >> {'loss': 1.0831, 'learning_rate': 8.7163e-06, 'epoch': 0.47, 'throughput': 771.22}
+
+[INFO|2025-06-05 18:37:44] logging.py:157 >> {'loss': 1.1209, 'learning_rate': 8.6697e-06, 'epoch': 0.47, 'throughput': 771.61}
+
+[INFO|2025-06-05 18:40:15] logging.py:157 >> {'loss': 1.1907, 'learning_rate': 8.6224e-06, 'epoch': 0.48, 'throughput': 772.12}
+
+[INFO|2025-06-05 18:42:46] logging.py:157 >> {'loss': 1.0976, 'learning_rate': 8.5744e-06, 'epoch': 0.49, 'throughput': 772.54}
+
+[INFO|2025-06-05 18:45:16] logging.py:157 >> {'loss': 1.1347, 'learning_rate': 8.5257e-06, 'epoch': 0.50, 'throughput': 773.27}
+
+[INFO|2025-06-05 18:47:47] logging.py:157 >> {'loss': 1.1350, 'learning_rate': 8.4764e-06, 'epoch': 0.51, 'throughput': 773.87}
+
+[INFO|2025-06-05 18:50:17] logging.py:157 >> {'loss': 1.1348, 'learning_rate': 8.4264e-06, 'epoch': 0.52, 'throughput': 774.30}
+
+[INFO|2025-06-05 18:52:48] logging.py:157 >> {'loss': 1.1033, 'learning_rate': 8.3757e-06, 'epoch': 0.53, 'throughput': 775.15}
+
+[INFO|2025-06-05 18:53:02] trainer.py:3942 >> Saving model checkpoint to saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-300
+
+[INFO|2025-06-05 18:53:02] configuration_utils.py:423 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-300/config.json
+
+[INFO|2025-06-05 18:53:02] configuration_utils.py:909 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-300/generation_config.json
+
+[INFO|2025-06-05 18:53:20] modeling_utils.py:3048 >> The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 4 checkpoint shards. You can find where each parameters has been saved in the index located at saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-300/model.safetensors.index.json.
+
+[INFO|2025-06-05 18:53:20] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-300/tokenizer_config.json
+
+[INFO|2025-06-05 18:53:20] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-300/special_tokens_map.json
+
+[INFO|2025-06-05 18:54:29] image_processing_base.py:261 >> Image processor saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-300/preprocessor_config.json
+
+[INFO|2025-06-05 18:54:29] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-300/tokenizer_config.json
+
+[INFO|2025-06-05 18:54:29] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-300/special_tokens_map.json
+
+[INFO|2025-06-05 18:54:29] processing_utils.py:638 >> chat template saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-300/chat_template.json
+
+[INFO|2025-06-05 18:58:25] logging.py:157 >> {'loss': 1.0532, 'learning_rate': 8.3244e-06, 'epoch': 0.54, 'throughput': 760.32}
+
+[INFO|2025-06-05 19:00:57] logging.py:157 >> {'loss': 1.1071, 'learning_rate': 8.2724e-06, 'epoch': 0.55, 'throughput': 760.94}
+
+[INFO|2025-06-05 19:03:27] logging.py:157 >> {'loss': 1.1110, 'learning_rate': 8.2198e-06, 'epoch': 0.55, 'throughput': 761.58}
+
+[INFO|2025-06-05 19:05:57] logging.py:157 >> {'loss': 1.0971, 'learning_rate': 8.1666e-06, 'epoch': 0.56, 'throughput': 762.19}
+
+[INFO|2025-06-05 19:08:30] logging.py:157 >> {'loss': 1.1154, 'learning_rate': 8.1128e-06, 'epoch': 0.57, 'throughput': 762.50}
+
+[INFO|2025-06-05 19:11:08] logging.py:157 >> {'loss': 1.1102, 'learning_rate': 8.0584e-06, 'epoch': 0.58, 'throughput': 762.76}
+
+[INFO|2025-06-05 19:13:46] logging.py:157 >> {'loss': 1.1021, 'learning_rate': 8.0034e-06, 'epoch': 0.59, 'throughput': 762.74}
+
+[INFO|2025-06-05 19:16:25] logging.py:157 >> {'loss': 1.0778, 'learning_rate': 7.9479e-06, 'epoch': 0.60, 'throughput': 762.49}
+
+[INFO|2025-06-05 19:19:03] logging.py:157 >> {'loss': 1.1035, 'learning_rate': 7.8917e-06, 'epoch': 0.61, 'throughput': 762.60}
+
+[INFO|2025-06-05 19:21:42] logging.py:157 >> {'loss': 1.1322, 'learning_rate': 7.8351e-06, 'epoch': 0.62, 'throughput': 762.63}
+
+[INFO|2025-06-05 19:24:21] logging.py:157 >> {'loss': 1.1074, 'learning_rate': 7.7779e-06, 'epoch': 0.62, 'throughput': 762.71}
+
+[INFO|2025-06-05 19:27:00] logging.py:157 >> {'loss': 1.0899, 'learning_rate': 7.7201e-06, 'epoch': 0.63, 'throughput': 762.70}
+
+[INFO|2025-06-05 19:29:38] logging.py:157 >> {'loss': 1.1144, 'learning_rate': 7.6618e-06, 'epoch': 0.64, 'throughput': 762.70}
+
+[INFO|2025-06-05 19:32:16] logging.py:157 >> {'loss': 1.1293, 'learning_rate': 7.6031e-06, 'epoch': 0.65, 'throughput': 762.85}
+
+[INFO|2025-06-05 19:34:55] logging.py:157 >> {'loss': 1.1300, 'learning_rate': 7.5438e-06, 'epoch': 0.66, 'throughput': 763.13}
+
+[INFO|2025-06-05 19:37:33] logging.py:157 >> {'loss': 1.0945, 'learning_rate': 7.4840e-06, 'epoch': 0.67, 'throughput': 762.89}
+
+[INFO|2025-06-05 19:40:11] logging.py:157 >> {'loss': 1.1007, 'learning_rate': 7.4238e-06, 'epoch': 0.68, 'throughput': 762.90}
+
+[INFO|2025-06-05 19:42:48] logging.py:157 >> {'loss': 1.1672, 'learning_rate': 7.3631e-06, 'epoch': 0.69, 'throughput': 763.26}
+
+[INFO|2025-06-05 19:45:25] logging.py:157 >> {'loss': 1.1380, 'learning_rate': 7.3019e-06, 'epoch': 0.69, 'throughput': 763.38}
+
+[INFO|2025-06-05 19:48:04] logging.py:157 >> {'loss': 1.0901, 'learning_rate': 7.2403e-06, 'epoch': 0.70, 'throughput': 763.28}
+
+[INFO|2025-06-05 19:48:17] trainer.py:3942 >> Saving model checkpoint to saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-400
+
+[INFO|2025-06-05 19:48:17] configuration_utils.py:423 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-400/config.json
+
+[INFO|2025-06-05 19:48:17] configuration_utils.py:909 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-400/generation_config.json
+
+[INFO|2025-06-05 19:48:37] modeling_utils.py:3048 >> The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 4 checkpoint shards. You can find where each parameters has been saved in the index located at saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-400/model.safetensors.index.json.
+
+[INFO|2025-06-05 19:48:37] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-400/tokenizer_config.json
+
+[INFO|2025-06-05 19:48:37] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-400/special_tokens_map.json
+
+[INFO|2025-06-05 19:49:46] image_processing_base.py:261 >> Image processor saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-400/preprocessor_config.json
+
+[INFO|2025-06-05 19:49:46] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-400/tokenizer_config.json
+
+[INFO|2025-06-05 19:49:46] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-400/special_tokens_map.json
+
+[INFO|2025-06-05 19:49:47] processing_utils.py:638 >> chat template saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-400/chat_template.json
+
+[INFO|2025-06-05 19:53:41] logging.py:157 >> {'loss': 1.1475, 'learning_rate': 7.1783e-06, 'epoch': 0.71, 'throughput': 752.86}
+
+[INFO|2025-06-05 19:56:12] logging.py:157 >> {'loss': 1.1195, 'learning_rate': 7.1159e-06, 'epoch': 0.72, 'throughput': 753.51}
+
+[INFO|2025-06-05 19:58:42] logging.py:157 >> {'loss': 1.1010, 'learning_rate': 7.0530e-06, 'epoch': 0.73, 'throughput': 754.10}
+
+[INFO|2025-06-05 20:01:12] logging.py:157 >> {'loss': 1.0662, 'learning_rate': 6.9898e-06, 'epoch': 0.74, 'throughput': 754.48}
+
+[INFO|2025-06-05 20:03:42] logging.py:157 >> {'loss': 1.1146, 'learning_rate': 6.9262e-06, 'epoch': 0.75, 'throughput': 755.05}
+
+[INFO|2025-06-05 20:06:13] logging.py:157 >> {'loss': 1.0806, 'learning_rate': 6.8622e-06, 'epoch': 0.76, 'throughput': 755.58}
+
+[INFO|2025-06-05 20:08:44] logging.py:157 >> {'loss': 1.1104, 'learning_rate': 6.7979e-06, 'epoch': 0.77, 'throughput': 756.12}
+
+[INFO|2025-06-05 20:11:20] logging.py:157 >> {'loss': 1.1022, 'learning_rate': 6.7332e-06, 'epoch': 0.77, 'throughput': 756.38}
+
+[INFO|2025-06-05 20:13:56] logging.py:157 >> {'loss': 1.0676, 'learning_rate': 6.6682e-06, 'epoch': 0.78, 'throughput': 756.56}
+
+[INFO|2025-06-05 20:16:31] logging.py:157 >> {'loss': 1.1085, 'learning_rate': 6.6028e-06, 'epoch': 0.79, 'throughput': 756.84}
+
+[INFO|2025-06-05 20:19:06] logging.py:157 >> {'loss': 1.1340, 'learning_rate': 6.5372e-06, 'epoch': 0.80, 'throughput': 757.09}
+
+[INFO|2025-06-05 20:21:42] logging.py:157 >> {'loss': 1.1320, 'learning_rate': 6.4713e-06, 'epoch': 0.81, 'throughput': 757.29}
+
+[INFO|2025-06-05 20:24:21] logging.py:157 >> {'loss': 1.1047, 'learning_rate': 6.4050e-06, 'epoch': 0.82, 'throughput': 757.44}
+
+[INFO|2025-06-05 20:27:00] logging.py:157 >> {'loss': 1.0765, 'learning_rate': 6.3386e-06, 'epoch': 0.83, 'throughput': 757.45}
+
+[INFO|2025-06-05 20:29:40] logging.py:157 >> {'loss': 1.0972, 'learning_rate': 6.2718e-06, 'epoch': 0.84, 'throughput': 757.54}
+
+[INFO|2025-06-05 20:32:19] logging.py:157 >> {'loss': 1.1134, 'learning_rate': 6.2048e-06, 'epoch': 0.84, 'throughput': 757.70}
+
+[INFO|2025-06-05 20:35:02] logging.py:157 >> {'loss': 1.1043, 'learning_rate': 6.1376e-06, 'epoch': 0.85, 'throughput': 757.70}
+
+[INFO|2025-06-05 20:37:45] logging.py:157 >> {'loss': 1.0700, 'learning_rate': 6.0702e-06, 'epoch': 0.86, 'throughput': 757.46}
+
+[INFO|2025-06-05 20:40:26] logging.py:157 >> {'loss': 1.0964, 'learning_rate': 6.0026e-06, 'epoch': 0.87, 'throughput': 757.55}
+
+[INFO|2025-06-05 20:43:07] logging.py:157 >> {'loss': 1.1229, 'learning_rate': 5.9347e-06, 'epoch': 0.88, 'throughput': 757.63}
+
+[INFO|2025-06-05 20:43:25] trainer.py:3942 >> Saving model checkpoint to saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-500
+
+[INFO|2025-06-05 20:43:25] configuration_utils.py:423 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-500/config.json
+
+[INFO|2025-06-05 20:43:25] configuration_utils.py:909 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-500/generation_config.json
+
+[INFO|2025-06-05 20:43:52] modeling_utils.py:3048 >> The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 4 checkpoint shards. You can find where each parameters has been saved in the index located at saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-500/model.safetensors.index.json.
+
+[INFO|2025-06-05 20:43:52] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-500/tokenizer_config.json
+
+[INFO|2025-06-05 20:43:52] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-500/special_tokens_map.json
+
+[INFO|2025-06-05 20:45:39] image_processing_base.py:261 >> Image processor saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-500/preprocessor_config.json
+
+[INFO|2025-06-05 20:45:39] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-500/tokenizer_config.json
+
+[INFO|2025-06-05 20:45:39] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-500/special_tokens_map.json
+
+[INFO|2025-06-05 20:45:41] processing_utils.py:638 >> chat template saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-500/chat_template.json
+
+[INFO|2025-06-05 20:49:29] logging.py:157 >> {'loss': 1.0852, 'learning_rate': 5.8667e-06, 'epoch': 0.89, 'throughput': 747.38}
+
+[INFO|2025-06-05 20:52:12] logging.py:157 >> {'loss': 1.0821, 'learning_rate': 5.7986e-06, 'epoch': 0.90, 'throughput': 747.26}
+
+[INFO|2025-06-05 20:54:55] logging.py:157 >> {'loss': 1.1333, 'learning_rate': 5.7302e-06, 'epoch': 0.91, 'throughput': 747.15}
+
+[INFO|2025-06-05 20:57:37] logging.py:157 >> {'loss': 1.0955, 'learning_rate': 5.6618e-06, 'epoch': 0.91, 'throughput': 747.12}
+
+[INFO|2025-06-05 21:00:20] logging.py:157 >> {'loss': 1.1060, 'learning_rate': 5.5932e-06, 'epoch': 0.92, 'throughput': 747.18}
+
+[INFO|2025-06-05 21:03:03] logging.py:157 >> {'loss': 1.0957, 'learning_rate': 5.5245e-06, 'epoch': 0.93, 'throughput': 747.21}
+
+[INFO|2025-06-05 21:05:46] logging.py:157 >> {'loss': 1.0648, 'learning_rate': 5.4557e-06, 'epoch': 0.94, 'throughput': 747.17}
+
+[INFO|2025-06-05 21:08:28] logging.py:157 >> {'loss': 1.1122, 'learning_rate': 5.3868e-06, 'epoch': 0.95, 'throughput': 747.26}
+
+[INFO|2025-06-05 21:11:11] logging.py:157 >> {'loss': 1.0725, 'learning_rate': 5.3178e-06, 'epoch': 0.96, 'throughput': 747.28}
+
+[INFO|2025-06-05 21:13:54] logging.py:157 >> {'loss': 1.0529, 'learning_rate': 5.2488e-06, 'epoch': 0.97, 'throughput': 747.18}
+
+[INFO|2025-06-05 21:16:42] logging.py:157 >> {'loss': 1.0818, 'learning_rate': 5.1797e-06, 'epoch': 0.98, 'throughput': 747.07}
+
+[INFO|2025-06-05 21:19:40] logging.py:157 >> {'loss': 1.0884, 'learning_rate': 5.1106e-06, 'epoch': 0.99, 'throughput': 746.32}
+
+[INFO|2025-06-05 21:22:35] logging.py:157 >> {'loss': 1.0935, 'learning_rate': 5.0415e-06, 'epoch': 0.99, 'throughput': 745.75}
+
+[INFO|2025-06-05 21:25:12] logging.py:157 >> {'loss': 0.9434, 'learning_rate': 4.9723e-06, 'epoch': 1.00, 'throughput': 745.29}
+
+[INFO|2025-06-05 21:28:13] logging.py:157 >> {'loss': 0.9537, 'learning_rate': 4.9032e-06, 'epoch': 1.01, 'throughput': 744.51}
+
+[INFO|2025-06-05 21:31:16] logging.py:157 >> {'loss': 0.9544, 'learning_rate': 4.8341e-06, 'epoch': 1.02, 'throughput': 743.69}
+
+[INFO|2025-06-05 21:34:15] logging.py:157 >> {'loss': 0.9278, 'learning_rate': 4.7650e-06, 'epoch': 1.03, 'throughput': 742.80}
+
+[INFO|2025-06-05 21:37:16] logging.py:157 >> {'loss': 0.9141, 'learning_rate': 4.6960e-06, 'epoch': 1.04, 'throughput': 742.17}
+
+[INFO|2025-06-05 21:40:18] logging.py:157 >> {'loss': 0.9248, 'learning_rate': 4.6270e-06, 'epoch': 1.05, 'throughput': 741.45}
+
+[INFO|2025-06-05 21:43:21] logging.py:157 >> {'loss': 0.9402, 'learning_rate': 4.5581e-06, 'epoch': 1.05, 'throughput': 740.67}
+
+[INFO|2025-06-05 21:43:50] trainer.py:3942 >> Saving model checkpoint to saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-600
+
+[INFO|2025-06-05 21:43:50] configuration_utils.py:423 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-600/config.json
+
+[INFO|2025-06-05 21:43:50] configuration_utils.py:909 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-600/generation_config.json
+
+[INFO|2025-06-05 21:44:24] modeling_utils.py:3048 >> The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 4 checkpoint shards. You can find where each parameters has been saved in the index located at saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-600/model.safetensors.index.json.
+
+[INFO|2025-06-05 21:44:24] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-600/tokenizer_config.json
+
+[INFO|2025-06-05 21:44:24] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-600/special_tokens_map.json
+
+[INFO|2025-06-05 21:47:47] image_processing_base.py:261 >> Image processor saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-600/preprocessor_config.json
+
+[INFO|2025-06-05 21:47:47] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-600/tokenizer_config.json
+
+[INFO|2025-06-05 21:47:47] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-600/special_tokens_map.json
+
+[INFO|2025-06-05 21:47:50] processing_utils.py:638 >> chat template saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-600/chat_template.json
+
+[INFO|2025-06-05 21:51:39] logging.py:157 >> {'loss': 0.9497, 'learning_rate': 4.4893e-06, 'epoch': 1.06, 'throughput': 728.36}
+
+[INFO|2025-06-05 21:54:40] logging.py:157 >> {'loss': 0.9468, 'learning_rate': 4.4206e-06, 'epoch': 1.07, 'throughput': 727.80}
+
+[INFO|2025-06-05 21:57:39] logging.py:157 >> {'loss': 0.9499, 'learning_rate': 4.3519e-06, 'epoch': 1.08, 'throughput': 727.34}
+
+[INFO|2025-06-05 22:00:40] logging.py:157 >> {'loss': 0.9659, 'learning_rate': 4.2834e-06, 'epoch': 1.09, 'throughput': 726.83}
+
+[INFO|2025-06-05 22:03:41] logging.py:157 >> {'loss': 0.9168, 'learning_rate': 4.2151e-06, 'epoch': 1.10, 'throughput': 726.41}
+
+[INFO|2025-06-05 22:06:42] logging.py:157 >> {'loss': 0.9431, 'learning_rate': 4.1469e-06, 'epoch': 1.11, 'throughput': 725.83}
+
+[INFO|2025-06-05 22:09:46] logging.py:157 >> {'loss': 0.9247, 'learning_rate': 4.0789e-06, 'epoch': 1.12, 'throughput': 725.13}
+
+[INFO|2025-06-05 22:12:45] logging.py:157 >> {'loss': 0.9617, 'learning_rate': 4.0110e-06, 'epoch': 1.12, 'throughput': 724.63}
+
+[INFO|2025-06-05 22:15:44] logging.py:157 >> {'loss': 0.9556, 'learning_rate': 3.9433e-06, 'epoch': 1.13, 'throughput': 724.22}
+
+[INFO|2025-06-05 22:18:42] logging.py:157 >> {'loss': 0.9513, 'learning_rate': 3.8758e-06, 'epoch': 1.14, 'throughput': 723.78}
+
+[INFO|2025-06-05 22:21:40] logging.py:157 >> {'loss': 0.9490, 'learning_rate': 3.8086e-06, 'epoch': 1.15, 'throughput': 723.45}
+
+[INFO|2025-06-05 22:24:38] logging.py:157 >> {'loss': 0.9656, 'learning_rate': 3.7416e-06, 'epoch': 1.16, 'throughput': 723.06}
+
+[INFO|2025-06-05 22:27:35] logging.py:157 >> {'loss': 0.9715, 'learning_rate': 3.6748e-06, 'epoch': 1.17, 'throughput': 722.85}
+
+[INFO|2025-06-05 22:30:34] logging.py:157 >> {'loss': 0.9238, 'learning_rate': 3.6082e-06, 'epoch': 1.18, 'throughput': 722.33}
+
+[INFO|2025-06-05 22:33:34] logging.py:157 >> {'loss': 0.9557, 'learning_rate': 3.5420e-06, 'epoch': 1.19, 'throughput': 721.89}
+
+[INFO|2025-06-05 22:36:35] logging.py:157 >> {'loss': 0.9318, 'learning_rate': 3.4760e-06, 'epoch': 1.20, 'throughput': 721.45}
+
+[INFO|2025-06-05 22:39:36] logging.py:157 >> {'loss': 0.9324, 'learning_rate': 3.4103e-06, 'epoch': 1.20, 'throughput': 721.02}
+
+[INFO|2025-06-05 22:42:35] logging.py:157 >> {'loss': 0.9262, 'learning_rate': 3.3449e-06, 'epoch': 1.21, 'throughput': 720.69}
+
+[INFO|2025-06-05 22:45:36] logging.py:157 >> {'loss': 0.9352, 'learning_rate': 3.2798e-06, 'epoch': 1.22, 'throughput': 720.40}
+
+[INFO|2025-06-05 22:48:36] logging.py:157 >> {'loss': 0.9596, 'learning_rate': 3.2150e-06, 'epoch': 1.23, 'throughput': 720.12}
+
+[INFO|2025-06-05 22:49:00] trainer.py:3942 >> Saving model checkpoint to saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-700
+
+[INFO|2025-06-05 22:49:00] configuration_utils.py:423 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-700/config.json
+
+[INFO|2025-06-05 22:49:00] configuration_utils.py:909 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-700/generation_config.json
+
+[INFO|2025-06-05 22:49:33] modeling_utils.py:3048 >> The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 4 checkpoint shards. You can find where each parameters has been saved in the index located at saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-700/model.safetensors.index.json.
+
+[INFO|2025-06-05 22:49:33] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-700/tokenizer_config.json
+
+[INFO|2025-06-05 22:49:33] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-700/special_tokens_map.json
+
+[INFO|2025-06-05 22:52:17] image_processing_base.py:261 >> Image processor saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-700/preprocessor_config.json
+
+[INFO|2025-06-05 22:52:17] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-700/tokenizer_config.json
+
+[INFO|2025-06-05 22:52:17] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-700/special_tokens_map.json
+
+[INFO|2025-06-05 22:52:19] processing_utils.py:638 >> chat template saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-700/chat_template.json
+
+[INFO|2025-06-05 22:56:23] logging.py:157 >> {'loss': 0.9369, 'learning_rate': 3.1506e-06, 'epoch': 1.24, 'throughput': 711.22}
+
+[INFO|2025-06-05 22:59:24] logging.py:157 >> {'loss': 0.9314, 'learning_rate': 3.0866e-06, 'epoch': 1.25, 'throughput': 710.83}
+
+[INFO|2025-06-05 23:02:26] logging.py:157 >> {'loss': 0.9322, 'learning_rate': 3.0229e-06, 'epoch': 1.26, 'throughput': 710.49}
+
+[INFO|2025-06-05 23:05:28] logging.py:157 >> {'loss': 0.9147, 'learning_rate': 2.9596e-06, 'epoch': 1.27, 'throughput': 710.14}
+
+[INFO|2025-06-05 23:08:29] logging.py:157 >> {'loss': 0.9388, 'learning_rate': 2.8967e-06, 'epoch': 1.27, 'throughput': 709.83}
+
+[INFO|2025-06-05 23:11:30] logging.py:157 >> {'loss': 0.9246, 'learning_rate': 2.8341e-06, 'epoch': 1.28, 'throughput': 709.58}
+
+[INFO|2025-06-05 23:14:32] logging.py:157 >> {'loss': 0.9163, 'learning_rate': 2.7720e-06, 'epoch': 1.29, 'throughput': 709.20}
+
+[INFO|2025-06-05 23:17:39] logging.py:157 >> {'loss': 0.9479, 'learning_rate': 2.7104e-06, 'epoch': 1.30, 'throughput': 708.88}
+
+[INFO|2025-06-05 23:20:48] logging.py:157 >> {'loss': 0.9479, 'learning_rate': 2.6491e-06, 'epoch': 1.31, 'throughput': 708.42}
+
+[INFO|2025-06-05 23:23:55] logging.py:157 >> {'loss': 0.9430, 'learning_rate': 2.5883e-06, 'epoch': 1.32, 'throughput': 707.99}
+
+[INFO|2025-06-05 23:26:56] logging.py:157 >> {'loss': 0.9544, 'learning_rate': 2.5280e-06, 'epoch': 1.33, 'throughput': 707.82}
+
+[INFO|2025-06-05 23:29:56] logging.py:157 >> {'loss': 0.9285, 'learning_rate': 2.4681e-06, 'epoch': 1.34, 'throughput': 707.67}
+
+[INFO|2025-06-05 23:32:55] logging.py:157 >> {'loss': 0.9324, 'learning_rate': 2.4088e-06, 'epoch': 1.34, 'throughput': 707.47}
+
+[INFO|2025-06-05 23:35:52] logging.py:157 >> {'loss': 0.9355, 'learning_rate': 2.3499e-06, 'epoch': 1.35, 'throughput': 707.33}
+
+[INFO|2025-06-05 23:38:53] logging.py:157 >> {'loss': 0.9717, 'learning_rate': 2.2915e-06, 'epoch': 1.36, 'throughput': 707.12}
+
+[INFO|2025-06-05 23:41:54] logging.py:157 >> {'loss': 0.9430, 'learning_rate': 2.2337e-06, 'epoch': 1.37, 'throughput': 706.83}
+
+[INFO|2025-06-05 23:44:58] logging.py:157 >> {'loss': 0.9515, 'learning_rate': 2.1763e-06, 'epoch': 1.38, 'throughput': 706.47}
+
+[INFO|2025-06-05 23:48:03] logging.py:157 >> {'loss': 0.9245, 'learning_rate': 2.1195e-06, 'epoch': 1.39, 'throughput': 706.17}
+
+[INFO|2025-06-05 23:51:09] logging.py:157 >> {'loss': 0.9168, 'learning_rate': 2.0633e-06, 'epoch': 1.40, 'throughput': 705.75}
+
+[INFO|2025-06-05 23:54:11] logging.py:157 >> {'loss': 0.9281, 'learning_rate': 2.0076e-06, 'epoch': 1.41, 'throughput': 705.46}
+
+[INFO|2025-06-05 23:54:39] trainer.py:3942 >> Saving model checkpoint to saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-800
+
+[INFO|2025-06-05 23:54:39] configuration_utils.py:423 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-800/config.json
+
+[INFO|2025-06-05 23:54:39] configuration_utils.py:909 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-800/generation_config.json
+
+[INFO|2025-06-05 23:55:11] modeling_utils.py:3048 >> The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 4 checkpoint shards. You can find where each parameters has been saved in the index located at saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-800/model.safetensors.index.json.
+
+[INFO|2025-06-05 23:55:11] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-800/tokenizer_config.json
+
+[INFO|2025-06-05 23:55:11] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-800/special_tokens_map.json
+
+[INFO|2025-06-05 23:58:41] image_processing_base.py:261 >> Image processor saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-800/preprocessor_config.json
+
+[INFO|2025-06-05 23:58:41] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-800/tokenizer_config.json
+
+[INFO|2025-06-05 23:58:41] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-800/special_tokens_map.json
+
+[INFO|2025-06-05 23:58:42] processing_utils.py:638 >> chat template saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-800/chat_template.json
+
+[INFO|2025-06-06 00:02:20] logging.py:157 >> {'loss': 0.9258, 'learning_rate': 1.9525e-06, 'epoch': 1.42, 'throughput': 697.42}
+
+[INFO|2025-06-06 00:05:19] logging.py:157 >> {'loss': 0.9464, 'learning_rate': 1.8980e-06, 'epoch': 1.42, 'throughput': 697.39}
+
+[INFO|2025-06-06 00:08:20] logging.py:157 >> {'loss': 0.9328, 'learning_rate': 1.8441e-06, 'epoch': 1.43, 'throughput': 697.17}
+
+[INFO|2025-06-06 00:11:23] logging.py:157 >> {'loss': 0.9130, 'learning_rate': 1.7908e-06, 'epoch': 1.44, 'throughput': 696.87}
+
+[INFO|2025-06-06 00:14:23] logging.py:157 >> {'loss': 0.9255, 'learning_rate': 1.7381e-06, 'epoch': 1.45, 'throughput': 696.72}
+
+[INFO|2025-06-06 00:17:24] logging.py:157 >> {'loss': 0.9145, 'learning_rate': 1.6860e-06, 'epoch': 1.46, 'throughput': 696.54}
+
+[INFO|2025-06-06 00:20:31] logging.py:157 >> {'loss': 0.9330, 'learning_rate': 1.6345e-06, 'epoch': 1.47, 'throughput': 696.26}
+
+[INFO|2025-06-06 00:23:32] logging.py:157 >> {'loss': 0.9384, 'learning_rate': 1.5837e-06, 'epoch': 1.48, 'throughput': 696.16}
+
+[INFO|2025-06-06 00:26:30] logging.py:157 >> {'loss': 0.9673, 'learning_rate': 1.5336e-06, 'epoch': 1.49, 'throughput': 696.15}
+
+[INFO|2025-06-06 00:29:29] logging.py:157 >> {'loss': 0.9664, 'learning_rate': 1.4841e-06, 'epoch': 1.49, 'throughput': 696.19}
+
+[INFO|2025-06-06 00:32:28] logging.py:157 >> {'loss': 0.9173, 'learning_rate': 1.4353e-06, 'epoch': 1.50, 'throughput': 696.07}
+
+[INFO|2025-06-06 00:35:26] logging.py:157 >> {'loss': 0.9573, 'learning_rate': 1.3871e-06, 'epoch': 1.51, 'throughput': 696.02}
+
+[INFO|2025-06-06 00:38:26] logging.py:157 >> {'loss': 0.9100, 'learning_rate': 1.3397e-06, 'epoch': 1.52, 'throughput': 695.85}
+
+[INFO|2025-06-06 00:41:24] logging.py:157 >> {'loss': 0.9187, 'learning_rate': 1.2929e-06, 'epoch': 1.53, 'throughput': 695.79}
+
+[INFO|2025-06-06 00:44:21] logging.py:157 >> {'loss': 0.9472, 'learning_rate': 1.2469e-06, 'epoch': 1.54, 'throughput': 695.77}
+
+[INFO|2025-06-06 00:47:22] logging.py:157 >> {'loss': 0.9350, 'learning_rate': 1.2016e-06, 'epoch': 1.55, 'throughput': 695.67}
+
+[INFO|2025-06-06 00:50:22] logging.py:157 >> {'loss': 0.9032, 'learning_rate': 1.1570e-06, 'epoch': 1.56, 'throughput': 695.51}
+
+[INFO|2025-06-06 00:53:21] logging.py:157 >> {'loss': 0.9289, 'learning_rate': 1.1131e-06, 'epoch': 1.56, 'throughput': 695.36}
+
+[INFO|2025-06-06 00:56:22] logging.py:157 >> {'loss': 0.9250, 'learning_rate': 1.0700e-06, 'epoch': 1.57, 'throughput': 695.27}
+
+[INFO|2025-06-06 00:59:20] logging.py:157 >> {'loss': 0.9291, 'learning_rate': 1.0276e-06, 'epoch': 1.58, 'throughput': 695.12}
+
+[INFO|2025-06-06 00:59:48] trainer.py:3942 >> Saving model checkpoint to saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-900
+
+[INFO|2025-06-06 00:59:48] configuration_utils.py:423 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-900/config.json
+
+[INFO|2025-06-06 00:59:48] configuration_utils.py:909 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-900/generation_config.json
+
+[INFO|2025-06-06 01:00:34] modeling_utils.py:3048 >> The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 4 checkpoint shards. You can find where each parameters has been saved in the index located at saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-900/model.safetensors.index.json.
+
+[INFO|2025-06-06 01:00:34] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-900/tokenizer_config.json
+
+[INFO|2025-06-06 01:00:34] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-900/special_tokens_map.json
+
+[INFO|2025-06-06 01:04:15] image_processing_base.py:261 >> Image processor saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-900/preprocessor_config.json
+
+[INFO|2025-06-06 01:04:15] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-900/tokenizer_config.json
+
+[INFO|2025-06-06 01:04:15] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-900/special_tokens_map.json
+
+[INFO|2025-06-06 01:04:16] processing_utils.py:638 >> chat template saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-900/chat_template.json
+
+[INFO|2025-06-06 01:07:22] logging.py:157 >> {'loss': 0.9161, 'learning_rate': 9.8602e-07, 'epoch': 1.59, 'throughput': 688.36}
+
+[INFO|2025-06-06 01:10:22] logging.py:157 >> {'loss': 0.9203, 'learning_rate': 9.4518e-07, 'epoch': 1.60, 'throughput': 688.23}
+
+[INFO|2025-06-06 01:13:22] logging.py:157 >> {'loss': 0.9162, 'learning_rate': 9.0512e-07, 'epoch': 1.61, 'throughput': 688.10}
+
+[INFO|2025-06-06 01:16:22] logging.py:157 >> {'loss': 0.9106, 'learning_rate': 8.6584e-07, 'epoch': 1.62, 'throughput': 688.05}
+
+[INFO|2025-06-06 01:19:23] logging.py:157 >> {'loss': 0.9019, 'learning_rate': 8.2735e-07, 'epoch': 1.63, 'throughput': 687.89}
+
+[INFO|2025-06-06 01:22:21] logging.py:157 >> {'loss': 0.9017, 'learning_rate': 7.8966e-07, 'epoch': 1.64, 'throughput': 687.84}
+
+[INFO|2025-06-06 01:25:20] logging.py:157 >> {'loss': 0.9207, 'learning_rate': 7.5277e-07, 'epoch': 1.64, 'throughput': 687.81}
+
+[INFO|2025-06-06 01:28:20] logging.py:157 >> {'loss': 0.9372, 'learning_rate': 7.1670e-07, 'epoch': 1.65, 'throughput': 687.68}
+
+[INFO|2025-06-06 01:31:19] logging.py:157 >> {'loss': 0.9037, 'learning_rate': 6.8144e-07, 'epoch': 1.66, 'throughput': 687.61}
+
+[INFO|2025-06-06 01:34:18] logging.py:157 >> {'loss': 0.9139, 'learning_rate': 6.4701e-07, 'epoch': 1.67, 'throughput': 687.54}
+
+[INFO|2025-06-06 01:37:17] logging.py:157 >> {'loss': 0.9180, 'learning_rate': 6.1341e-07, 'epoch': 1.68, 'throughput': 687.47}
+
+[INFO|2025-06-06 01:40:15] logging.py:157 >> {'loss': 0.9236, 'learning_rate': 5.8065e-07, 'epoch': 1.69, 'throughput': 687.50}
+
+[INFO|2025-06-06 01:43:15] logging.py:157 >> {'loss': 0.9299, 'learning_rate': 5.4874e-07, 'epoch': 1.70, 'throughput': 687.45}
+
+[INFO|2025-06-06 01:46:12] logging.py:157 >> {'loss': 0.9152, 'learning_rate': 5.1768e-07, 'epoch': 1.71, 'throughput': 687.41}
+
+[INFO|2025-06-06 01:49:10] logging.py:157 >> {'loss': 0.9202, 'learning_rate': 4.8747e-07, 'epoch': 1.71, 'throughput': 687.33}
+
+[INFO|2025-06-06 01:52:11] logging.py:157 >> {'loss': 0.9304, 'learning_rate': 4.5813e-07, 'epoch': 1.72, 'throughput': 687.22}
+
+[INFO|2025-06-06 01:55:10] logging.py:157 >> {'loss': 0.9343, 'learning_rate': 4.2965e-07, 'epoch': 1.73, 'throughput': 687.20}
+
+[INFO|2025-06-06 01:58:07] logging.py:157 >> {'loss': 0.9196, 'learning_rate': 4.0205e-07, 'epoch': 1.74, 'throughput': 687.30}
+
+[INFO|2025-06-06 02:01:06] logging.py:157 >> {'loss': 0.9284, 'learning_rate': 3.7533e-07, 'epoch': 1.75, 'throughput': 687.21}
+
+[INFO|2025-06-06 02:04:04] logging.py:157 >> {'loss': 0.9307, 'learning_rate': 3.4949e-07, 'epoch': 1.76, 'throughput': 687.14}
+
+[INFO|2025-06-06 02:04:27] trainer.py:3942 >> Saving model checkpoint to saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1000
+
+[INFO|2025-06-06 02:04:27] configuration_utils.py:423 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1000/config.json
+
+[INFO|2025-06-06 02:04:27] configuration_utils.py:909 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1000/generation_config.json
+
+[INFO|2025-06-06 02:04:59] modeling_utils.py:3048 >> The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 4 checkpoint shards. You can find where each parameters has been saved in the index located at saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1000/model.safetensors.index.json.
+
+[INFO|2025-06-06 02:04:59] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1000/tokenizer_config.json
+
+[INFO|2025-06-06 02:04:59] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1000/special_tokens_map.json
+
+[INFO|2025-06-06 02:08:39] image_processing_base.py:261 >> Image processor saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1000/preprocessor_config.json
+
+[INFO|2025-06-06 02:08:39] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1000/tokenizer_config.json
+
+[INFO|2025-06-06 02:08:39] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1000/special_tokens_map.json
+
+[INFO|2025-06-06 02:08:41] processing_utils.py:638 >> chat template saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1000/chat_template.json
+
+[INFO|2025-06-06 02:12:13] logging.py:157 >> {'loss': 0.9319, 'learning_rate': 3.2454e-07, 'epoch': 1.77, 'throughput': 681.13}
+
+[INFO|2025-06-06 02:15:11] logging.py:157 >> {'loss': 0.9220, 'learning_rate': 3.0049e-07, 'epoch': 1.78, 'throughput': 681.15}
+
+[INFO|2025-06-06 02:18:10] logging.py:157 >> {'loss': 0.9403, 'learning_rate': 2.7733e-07, 'epoch': 1.78, 'throughput': 681.16}
+
+[INFO|2025-06-06 02:21:09] logging.py:157 >> {'loss': 0.9336, 'learning_rate': 2.5508e-07, 'epoch': 1.79, 'throughput': 681.14}
+
+[INFO|2025-06-06 02:24:09] logging.py:157 >> {'loss': 0.9195, 'learning_rate': 2.3373e-07, 'epoch': 1.80, 'throughput': 681.07}
+
+[INFO|2025-06-06 02:27:09] logging.py:157 >> {'loss': 0.9325, 'learning_rate': 2.1330e-07, 'epoch': 1.81, 'throughput': 681.04}
+
+[INFO|2025-06-06 02:30:08] logging.py:157 >> {'loss': 0.9385, 'learning_rate': 1.9378e-07, 'epoch': 1.82, 'throughput': 681.03}
+
+[INFO|2025-06-06 02:33:07] logging.py:157 >> {'loss': 0.9188, 'learning_rate': 1.7518e-07, 'epoch': 1.83, 'throughput': 681.08}
+
+[INFO|2025-06-06 02:36:06] logging.py:157 >> {'loss': 0.9217, 'learning_rate': 1.5750e-07, 'epoch': 1.84, 'throughput': 681.06}
+
+[INFO|2025-06-06 02:39:06] logging.py:157 >> {'loss': 0.9226, 'learning_rate': 1.4074e-07, 'epoch': 1.85, 'throughput': 681.03}
+
+[INFO|2025-06-06 02:42:04] logging.py:157 >> {'loss': 0.9637, 'learning_rate': 1.2492e-07, 'epoch': 1.85, 'throughput': 681.11}
+
+[INFO|2025-06-06 02:45:03] logging.py:157 >> {'loss': 0.9258, 'learning_rate': 1.1003e-07, 'epoch': 1.86, 'throughput': 681.08}
+
+[INFO|2025-06-06 02:48:02] logging.py:157 >> {'loss': 0.9347, 'learning_rate': 9.6074e-08, 'epoch': 1.87, 'throughput': 681.06}
+
+[INFO|2025-06-06 02:51:01] logging.py:157 >> {'loss': 0.9225, 'learning_rate': 8.3055e-08, 'epoch': 1.88, 'throughput': 681.08}
+
+[INFO|2025-06-06 02:53:58] logging.py:157 >> {'loss': 0.9052, 'learning_rate': 7.0976e-08, 'epoch': 1.89, 'throughput': 681.05}
+
+[INFO|2025-06-06 02:56:56] logging.py:157 >> {'loss': 0.9104, 'learning_rate': 5.9840e-08, 'epoch': 1.90, 'throughput': 681.08}
+
+[INFO|2025-06-06 02:59:53] logging.py:157 >> {'loss': 0.9305, 'learning_rate': 4.9648e-08, 'epoch': 1.91, 'throughput': 681.11}
+
+[INFO|2025-06-06 03:02:52] logging.py:157 >> {'loss': 0.9224, 'learning_rate': 4.0403e-08, 'epoch': 1.92, 'throughput': 681.15}
+
+[INFO|2025-06-06 03:05:50] logging.py:157 >> {'loss': 0.9338, 'learning_rate': 3.2106e-08, 'epoch': 1.93, 'throughput': 681.19}
+
+[INFO|2025-06-06 03:08:47] logging.py:157 >> {'loss': 0.9140, 'learning_rate': 2.4759e-08, 'epoch': 1.93, 'throughput': 681.18}
+
+[INFO|2025-06-06 03:09:14] trainer.py:3942 >> Saving model checkpoint to saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1100
+
+[INFO|2025-06-06 03:09:14] configuration_utils.py:423 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1100/config.json
+
+[INFO|2025-06-06 03:09:14] configuration_utils.py:909 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1100/generation_config.json
+
+[INFO|2025-06-06 03:09:54] modeling_utils.py:3048 >> The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 4 checkpoint shards. You can find where each parameters has been saved in the index located at saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1100/model.safetensors.index.json.
+
+[INFO|2025-06-06 03:09:54] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1100/tokenizer_config.json
+
+[INFO|2025-06-06 03:09:54] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1100/special_tokens_map.json
+
+[INFO|2025-06-06 03:13:18] image_processing_base.py:261 >> Image processor saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1100/preprocessor_config.json
+
+[INFO|2025-06-06 03:13:18] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1100/tokenizer_config.json
+
+[INFO|2025-06-06 03:13:18] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1100/special_tokens_map.json
+
+[INFO|2025-06-06 03:13:20] processing_utils.py:638 >> chat template saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1100/chat_template.json
+
+[INFO|2025-06-06 03:16:50] logging.py:157 >> {'loss': 0.9298, 'learning_rate': 1.8363e-08, 'epoch': 1.94, 'throughput': 675.97}
+
+[INFO|2025-06-06 03:19:48] logging.py:157 >> {'loss': 0.9283, 'learning_rate': 1.2919e-08, 'epoch': 1.95, 'throughput': 675.98}
+
+[INFO|2025-06-06 03:22:52] logging.py:157 >> {'loss': 0.9239, 'learning_rate': 8.4295e-09, 'epoch': 1.96, 'throughput': 675.88}
+
+[INFO|2025-06-06 03:25:51] logging.py:157 >> {'loss': 0.9085, 'learning_rate': 4.8939e-09, 'epoch': 1.97, 'throughput': 675.92}
+
+[INFO|2025-06-06 03:28:58] logging.py:157 >> {'loss': 0.9332, 'learning_rate': 2.3133e-09, 'epoch': 1.98, 'throughput': 675.82}
+
+[INFO|2025-06-06 03:32:04] logging.py:157 >> {'loss': 0.9338, 'learning_rate': 6.8830e-10, 'epoch': 1.99, 'throughput': 675.69}
+
+[INFO|2025-06-06 03:35:09] logging.py:157 >> {'loss': 0.9101, 'learning_rate': 1.9120e-11, 'epoch': 2.00, 'throughput': 675.60}
+
+[INFO|2025-06-06 03:36:11] trainer.py:3942 >> Saving model checkpoint to saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1136
+
+[INFO|2025-06-06 03:36:11] configuration_utils.py:423 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1136/config.json
+
+[INFO|2025-06-06 03:36:11] configuration_utils.py:909 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1136/generation_config.json
+
+[INFO|2025-06-06 03:36:43] modeling_utils.py:3048 >> The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 4 checkpoint shards. You can find where each parameters has been saved in the index located at saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1136/model.safetensors.index.json.
+
+[INFO|2025-06-06 03:36:43] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1136/tokenizer_config.json
+
+[INFO|2025-06-06 03:36:43] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1136/special_tokens_map.json
+
+[INFO|2025-06-06 03:39:28] image_processing_base.py:261 >> Image processor saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1136/preprocessor_config.json
+
+[INFO|2025-06-06 03:39:28] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1136/tokenizer_config.json
+
+[INFO|2025-06-06 03:39:28] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1136/special_tokens_map.json
+
+[INFO|2025-06-06 03:39:32] processing_utils.py:638 >> chat template saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/checkpoint-1136/chat_template.json
+
+[INFO|2025-06-06 03:39:32] trainer.py:2657 >> 
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+
+[INFO|2025-06-06 03:39:33] image_processing_base.py:261 >> Image processor saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/preprocessor_config.json
+
+[INFO|2025-06-06 03:39:33] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/tokenizer_config.json
+
+[INFO|2025-06-06 03:39:33] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/special_tokens_map.json
+
+[INFO|2025-06-06 03:39:34] processing_utils.py:638 >> chat template saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/chat_template.json
+
+[INFO|2025-06-06 03:40:11] trainer.py:3942 >> Saving model checkpoint to saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2
+
+[INFO|2025-06-06 03:40:11] configuration_utils.py:423 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/config.json
+
+[INFO|2025-06-06 03:40:11] configuration_utils.py:909 >> Configuration saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/generation_config.json
+
+[INFO|2025-06-06 03:41:10] modeling_utils.py:3048 >> The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 4 checkpoint shards. You can find where each parameters has been saved in the index located at saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/model.safetensors.index.json.
+
+[INFO|2025-06-06 03:41:10] tokenization_utils_base.py:2500 >> tokenizer config file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/tokenizer_config.json
+
+[INFO|2025-06-06 03:41:10] tokenization_utils_base.py:2509 >> Special tokens file saved in saves/Qwen2-VL-7B-Instruct/full/train_Stage2_use_32B_MIMIC_CXR_10000_1_train_merger_llm_1e-5_epoch2/special_tokens_map.json
+
+[WARNING|2025-06-06 03:41:14] logging.py:162 >> No metric eval_loss to plot.
+
+[WARNING|2025-06-06 03:41:14] logging.py:162 >> No metric eval_accuracy to plot.
+
+[INFO|2025-06-06 03:41:14] modelcard.py:449 >> Dropping the following result as it does not have all the necessary fields:
+{'task': {'name': 'Causal Language Modeling', 'type': 'text-generation'}}
+
