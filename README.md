@@ -130,11 +130,6 @@ python DiagCoT-main/LLaMA-Factory-main/eval_gounding_code/evaluate_grounding_cot
 
 We have uploaded the final trained model weights and Dastset json to Quark Cloud Drive. The link is as follows: https://pan.quark.cn/s/9768b2105a3b?pwd=V6Be
 
-## Todo
-- [x] Release the code of Report (MIMIC-CXR and IU-Xray)
-- [ ] Release the code of Classification 
-- [ ] Release the code of Grounding 
-
 ## Acknowledgment
 We sincerely thank the [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) and [EasyR1](https://github.com/hiyouga/EasyR1) projects for their excellent open-source work, which our SFT and GRPO codes are respectively based on.
 
