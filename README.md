@@ -124,7 +124,11 @@ python /data0/zhuoxu/yihong/code/DiagCoT-main/LLaMA-Factory-main/compute_eval_me
 python DiagCoT-main/LLaMA-Factory-main/eval_gounding_code/evaluate_grounding_cot_rft.py
 ``` 
 
-
+## Evaluation of Classification Task
+- Classification
+```bash
+python DiagCoT-main/LLaMA-Factory-main/eval_cls_code/test_cls_model.py
+``` 
 
 ## Model Weights Path
 
